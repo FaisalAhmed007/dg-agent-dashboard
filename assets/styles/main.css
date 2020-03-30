@@ -478,7 +478,44 @@ svg {
   background-color: #fff;
   display: flex;
   width: 100%;
-  flex-grow: 1; }
+  flex-grow: 1;
+  flex-flow: column;
+  padding: 0 15px 15px; }
+.App__sidebar .sidebar__contentTitle {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 7px 0;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  white-space: nowrap;
+  padding-right: 10px;
+  width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+.App__sidebar .sidebar__contentList {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  text-decoration: none;
+  cursor: pointer; }
+.App__sidebar .sidebar__contentItem {
+  margin: 10px 0;
+  padding: 10px 20px; }
+.App__sidebar .sidebar__contentItem:first-child {
+  margin-top: 0; }
+.App__sidebar .sidebar__contentItem:hover, .App__sidebar .sidebar__contentItem:active, .App__sidebar .sidebar__contentItem:focus {
+  background-color: rgba(238, 57, 95, .5);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; }
+.App__sidebar .sidebar__contentLink {
+  text-decoration: none;
+  cursor: pointer; }
+.App__sidebar .sidebar__contentLable {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, .5);
+  font-weight: 500; }
 .App__main {
   position: relative;
   display: flex;
@@ -487,8 +524,99 @@ svg {
   padding: 60px 0 0 280px;
   transition: all .2s; }
 .App__main .main {
-  padding: 30px 30px 0;
-  background: rgba(255, 0, 0, .2); }
+  padding: 30px 30px 0; }
+.App__main .main .header {
+  position: relative;
+  padding: 30px;
+  margin: -30px -30px 30px;
+  background-color: rgba(255, 255, 255, .45); }
+.App__main .main .headerWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-contents: center; }
+.App__main .main .header__Title {
+  position: relative;
+  display: inline-flex; }
+.App__main .main .header__Icons {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: .83333333rem;
+  margin: 0 30px 0 0;
+  background: #fff;
+  box-shadow: 0 .46875rem 2.1875rem rgba(4, 9, 20, .03), 0 .9375rem 1.40625rem rgba(4, 9, 20, .03), 0 .25rem .53125rem rgba(4, 9, 20, .05), 0 .125rem .1875rem rgba(4, 9, 20, .03);
+  border-radius: .25rem;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd; }
+.App__main .main .header__IconsPlane {
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px; }
+.App__main .main .header__contentHeading {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500; }
+.App__main .main .header__contentSubheading {
+  font-size: 14px;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, .3);
+  opacity: .6;
+  padding-top: 10px; }
+.App__main .main .header__Actions {
+  margin-left: auto; }
+.App__main .main .header__Actions .actions__dark, .App__main .main .header__Actions .actions__success {
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  font-style: normal;
+  box-shadow: none;
+  font-family: "Rubik", "Noto Sans Bengali", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  height: 56px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+.App__main .main .header__Actions .actions__dark:hover, .App__main .main .header__Actions .actions__dark:focus, .App__main .main .header__Actions .actions__success:hover, .App__main .main .header__Actions .actions__success:focus {
+  outline: none; }
+.App__main .main .header__Actions .actions__dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+  box-shadow: 0 .125rem .625rem rgba(52, 58, 64, .4), 0 .0625rem .125rem rgba(52, 58, 64, .5);
+  margin-right: 1rem;
+  width: 34px; }
+.App__main .main .header__Actions .actions__success {
+  color: #fff;
+  background-color: #3ac47d;
+  border-color: #3ac47d;
+  box-shadow: 0 .125rem .625rem rgba(58, 196, 125, .4), 0 .0625rem .125rem rgba(58, 196, 125, .5);
+  padding: 0 10px; }
 .App__footer {
   position: fixed;
   bottom: 0;
