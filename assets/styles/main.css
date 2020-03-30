@@ -1,0 +1,507 @@
+/**
+ * dgখাতা v1.0.0 - বাকী-জমার হিসাব নিকাশ ম্যানেজ করতে ব্যবহার করুন
+ * @copyright 2017-2020 Deligram
+ */
+@-webkit-keyframes bounceDown {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(60%); }
+  20% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(35%); }
+  40% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(20%); }
+  60% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(0); }
+  80% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(60%); }
+  20% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(35%); }
+  40% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(20%); }
+  60% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(0); }
+  80% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+@-webkit-keyframes bounceRight {
+  0% {
+    transform: translateX(0); }
+  10% {
+    transform: translateX(40%); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(20%); }
+  40% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(10%); }
+  60% {
+    transform: translateX(0); }
+  70% {
+    transform: translateX(0); }
+  80% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0); }
+  10% {
+    transform: translateX(40%); }
+  20% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(20%); }
+  40% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(10%); }
+  60% {
+    transform: translateX(0); }
+  70% {
+    transform: translateX(0); }
+  80% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(0); } }
+
+/* minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, audio, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0;
+  text-align: left; }
+
+html {
+  background-color: #fff;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%; }
+
+body {
+  font-family: "Rubik", "Noto Sans Bengali", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #000;
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 2;
+  height: 100%; }
+
+article, aside, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rubik"), local("Rubik-Regular"), url(https://fonts.gstatic.com/s/rubik/v7/iJWKBXyIfDnIV7nBrXyw023e.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Rubik Medium"), local("Rubik-Medium"), url(https://fonts.gstatic.com/s/rubik/v7/iJWHBXyIfDnIV7Eyjmmd8WD07oB-.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Rubik Bold"), local("Rubik-Bold"), url(https://fonts.gstatic.com/s/rubik/v7/iJWHBXyIfDnIV7F6iGmd8WD07oB-.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/*
+ * Noto Sans Bengali (Bengali) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Regular.eot?#iefix) format("embedded-opentype"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Regular.ttf) format("truetype"); }
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Bold.eot?#iefix) format("embedded-opentype"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansbengaliui/v1/NotoSansBengaliUI-Bold.ttf) format("truetype"); }
+
+.Svg {
+  display: inline-block;
+  vertical-align: top;
+  position: relative; }
+
+svg {
+  pointer-events: none; }
+
+.field {
+  margin-top: 30px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px; }
+.field:not(:last-child) {
+  margin-bottom: 20px; }
+.field__label {
+  display: block;
+  color: #333;
+  fill: #333;
+  font-size: 2em;
+  line-height: 1.33;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  margin-bottom: 6px; }
+.field__input {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  display: inline-flex;
+  height: 56px;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: 6px 15px;
+  position: relative;
+  vertical-align: top;
+  border-color: #808080;
+  color: #000;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  font-size: 2.6em;
+  font-weight: 700;
+  transition: all .1s ease-out; }
+.field__input:focus, .field__input:active {
+  border-color: #000;
+  box-shadow: none;
+  outline: none;
+  background-color: #fff; }
+.field__input::-moz-placeholder {
+  color: #bbb; }
+.field__input::-webkit-input-placeholder {
+  color: #bbb; }
+.field__input:-moz-placeholder {
+  color: #bbb; }
+.field__input:-ms-input-placeholder {
+  color: #bbb; }
+.field__error {
+  display: block;
+  font-size: 1.6em;
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #e1133e;
+  background-color: #fcdde4;
+  border: 1px solid #f697ab;
+  border-radius: 6px; }
+.field.joma .field__label, .field.joma .field__input {
+  color: #338f52; }
+.field.baki .field__label, .field.baki .field__input {
+  color: #ee395f; }
+
+.submitButton {
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  font-style: normal;
+  box-shadow: none;
+  font-family: "Rubik", "Noto Sans Bengali", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  height: 56px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  fill: #fff;
+  background-color: #41b468;
+  border-color: #3aa15d #338f52 #2d7c48;
+  background: linear-gradient(to bottom, #57c27b, #338f52);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset;
+  width: 100%;
+  border-radius: 6px; }
+.submitButton:hover, .submitButton:focus {
+  outline: none; }
+.submitButton:hover {
+  color: #fff;
+  fill: #fff;
+  background-color: #3aa15d;
+  background: linear-gradient(to bottom, #41b468, #41b468); }
+.submitButton.baki {
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  fill: #fff;
+  background-color: #ee395f;
+  border-color: #ec224c #e1133e #c91138;
+  background: linear-gradient(to bottom, #f15a7a, #e1133e);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset; }
+.submitButton.baki:hover {
+  color: #fff;
+  fill: #fff;
+  background-color: #ec224c;
+  background: linear-gradient(to bottom, #ee395f, #ee395f); }
+.submitButton.joma {
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  fill: #fff;
+  background-color: #41b468;
+  border-color: #3aa15d #338f52 #2d7c48;
+  background: linear-gradient(to bottom, #57c27b, #338f52);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset; }
+.submitButton.joma:hover {
+  color: #fff;
+  fill: #fff;
+  background-color: #3aa15d;
+  background: linear-gradient(to bottom, #41b468, #41b468); }
+.submitButton.disabled {
+  pointer-events: none;
+  opacity: .5; }
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f1f4f6; }
+.App__header {
+  position: relative; }
+.App__header .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background-color: #fafbfc;
+  box-shadow: 0 1px .5px rgba(0, 0, 0, .05); }
+.App__header .header__logo {
+  display: none; }
+.App__header .header__content {
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding-left: 280px;
+  height: 60px;
+  flex: 1; }
+.App__header .header__content__left, .App__header .header__content__right {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  flex: 1; }
+.App__header .header__content__right {
+  text-align: left;
+  border: 1px solid red; }
+.App__header .header__search {
+  position: relative;
+  height: 30px;
+  width: 320px; }
+.App__header .header__searchInput {
+  width: 100%;
+  height: 30px;
+  float: left;
+  padding: 0 40px 0 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  outline: none; }
+.App__header .header__searchInput::focus {
+  outline: none; }
+.App__header .header__searchCloseButton {
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  font-style: normal;
+  box-shadow: none;
+  font-family: "Rubik", "Noto Sans Bengali", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  height: 56px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ddd; }
+.App__header .header__searchCloseButton:hover, .App__header .header__searchCloseButton:focus {
+  outline: none; }
+.App__sidebar {
+  position: relative; }
+.App__sidebar .sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100vh;
+  z-index: 20;
+  box-shadow: 7px 0 50px rgba(0, 0, 0, .05);
+  overflow: hidden;
+  transition: all .3s ease; }
+.App__sidebar .sidebar__logo {
+  background-color: #fafbfc;
+  height: 60px;
+  width: 280px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center; }
+.App__sidebar .sidebar__logo--src {
+  margin-right: 120px;
+  width: 100px;
+  height: 23px; }
+.App__sidebar .sidebar__hamburger {
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  font-style: normal;
+  box-shadow: none;
+  font-family: "Rubik", "Noto Sans Bengali", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  height: 56px;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+.App__sidebar .sidebar__hamburger:hover, .App__sidebar .sidebar__hamburger:focus {
+  outline: none; }
+.App__sidebar .sidebar .ml-auto {
+  margin-left: 0 !important;
+  left: 0; }
+.App__sidebar .sidebar__content {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-grow: 1; }
+.App__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 8;
+  padding: 60px 0 0 280px;
+  transition: all .2s; }
+.App__main .main {
+  padding: 30px 30px 0;
+  background: rgba(255, 0, 0, .2); }
+.App__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 280px;
+  height: 60px;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+  z-index: 12;
+  overflow: hidden; }
+.App__footer .footer {
+  height: 60px;
+  padding: 15px 30px 0;
+  background-color: #fafbfc; }
+
+/*# sourceMappingURL=main.css.map */
