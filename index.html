@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="./imgs/favicon.png" />
   <title>Agent Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 <body>
@@ -61,7 +63,7 @@
               </a>
             </li>
             <li class="sidebar__contentItem">
-              <a href="" class="sidebar__contentLink">
+              <a href="createagent.html" class="sidebar__contentLink">
                 <label for="" class="sidebar__contentLable">Create Agents</label>
               </a>
             </li>
@@ -110,29 +112,224 @@
               </button>
             </div>
           </div>
-          <div class="header__card">
-            <div class="card">
-              <div class="card__header">
-                <div class="card__headerTitle">
-                  Portfolio Performance
-                </div>
-                <div class="card__headerButton">
-                  <button class="button header__view">View All</button>
+        </div>
+        <div class="header__card">
+          <div class="card">
+            <div class="card__header">
+              <div class="card__headerTitle">
+                Portfolio Performance
+              </div>
+              <div class="card__headerButton">
+                <button class="button card__headerButton__view">View All</button>
+              </div>
+            </div>
+            <div class="card__body">
+              <div class="card__bodyRow1">
+                <div class="widget-chart">
+                  <div class="widget-chart__Icon">
+                    <img class="widget-chart__IconImage" src="assets/img/safe-box.png" alt="">
+                  </div>
+                  <div class="widget-chart__Content">
+                    <div class="widget-chart__subheading">Cash Deposits</div>
+                    <div class="widget-chart__number">1.7M</div>
+                    <div class="widget-chart__description">
+                      <div class="widget-chart__description__ratio">
+                        <span class="pl-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
+                            <g id="down" transform="translate(0 -59.382)">
+                              <path id="Path_19" fill="#d92550" data-name="Path 19" d="M8.91,59.9l-.451-.429a.293.293,0,0,0-.415,0L4.5,62.844.956,59.468a.293.293,0,0,0-.415,0L.09,59.9a.261.261,0,0,0,0,.4l4.2,4a.293.293,0,0,0,.415,0l4.2-4a.262.262,0,0,0,0-.4Z" transform="translate(0 0)"/>
+                            </g>
+                          </svg>
+                          54.1%</span>
+                      </div>
+                      less earnings
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="card__body">
-                <div class="card__row-4">
-                  
+              <div class="card__bodyRow2">
+                <div class="widget-chart">
+                  <div class="widget-chart__Icon widget-chart__Icon--dgDanger">
+                    <img class="widget-chart__IconImage" src="assets/img/student.svg" alt="">
+                  </div>
+                  <div class="widget-chart__Content">
+                    <div class="widget-chart__subheading">Invested Dividents</div>
+                    <div class="widget-chart__number">1.7M</div>
+                    <div class="widget-chart__description">
+                      Grow Rate:
+                      <div class="widget-chart__description__ratio widget-chart__description__ratio--left">
+                        <span class="pl-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
+                            <g id="down" transform="translate(0 -59.382)">
+                              <path id="Path_19" fill="#16aaff" data-name="Path 19" d="M8.91,59.9l-.451-.429a.293.293,0,0,0-.415,0L4.5,62.844.956,59.468a.293.293,0,0,0-.415,0L.09,59.9a.261.261,0,0,0,0,.4l4.2,4a.293.293,0,0,0,.415,0l4.2-4a.262.262,0,0,0,0-.4Z" transform="translate(0 0)"/>
+                            </g>
+                          </svg>
+                          54.1%</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="card__row-4"></div>
-                <div class="card__row-4"></div>
-                <div class="card__row-4"></div>
               </div>
-              <div class="card__footer">
-                <button class="button card__button">View Complete Report</button>
+              <div class="card__bodyRow3">
+                <div class="widget-chart">
+                  <div class="widget-chart__Icon widget-chart__Icon--bg-success">
+                    <img class="widget-chart__IconImage" src="assets/img/office-building.svg" alt="">
+                  </div>
+                  <div class="widget-chart__Content">
+                    <div class="widget-chart__subheading">Capital Gains</div>
+                    <div class="widget-chart__number">1.7M</div>
+                    <div class="widget-chart__description">
+                      Increased by
+                      <div class="widget-chart__description__ratio widget-chart__description__ratio--left">
+                        <span class="pl-1 pl-3"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
+                            <g id="down" transform="translate(9 64.382) rotate(-180)">
+                              <path id="Path_19" fill="#f7b924" data-name="Path 19" d="M8.91,59.9l-.451-.429a.293.293,0,0,0-.415,0L4.5,62.844.956,59.468a.293.293,0,0,0-.415,0L.09,59.9a.261.261,0,0,0,0,.4l4.2,4a.293.293,0,0,0,.415,0l4.2-4a.262.262,0,0,0,0-.4Z" transform="translate(0 0)"/>
+                            </g>
+                          </svg>
+                          54.1%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__footer">
+              <button class="button card__button">View Complete Report</button>
+            </div>
+          </div>
+        </div>
+        <div class="main__row">
+          <div class="col-sm-12 col-lg-6">
+            <div class="header__card header__card--wrap">
+              <div class="card">
+                <div class="card__header">
+                  <div class="card__headerTitle">
+                    <img class="card__headerTitle--Image" src="assets/img/cloud-computing.svg" alt="">
+                    Technical Support
+                  </div>
+                  <div class="card__headerButton">
+                    <button class="button card__headerButton__view--remove">
+                      <img src="assets/img/hamburger.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <div class="slick__slider-sm">
+                    <ngx-slick-carousel class="slick__slider slick__dotted slick__initialized">
+                      <button class="slick__prev slick__arrow">
+                        <span class="slick__prevImage">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
+                            <g id="down" transform="translate(71.382) rotate(90)">
+                              <path id="Path_19" fill="#000000" data-name="Path 19" d="M14.85,60.619,14.1,59.588a.393.393,0,0,0-.691,0L7.5,67.691l-5.907-8.1a.427.427,0,0,0-.346-.206.427.427,0,0,0-.346.206L.15,60.619a.823.823,0,0,0,0,.948l7,9.608a.393.393,0,0,0,.691,0l7-9.608a.825.825,0,0,0,0-.949Z" transform="translate(0 0)"/>
+                            </g>
+                          </svg>
+                        </span>
+                      </button>
+                      <div class="slick__list draggable">
+                        <div class="slick__track">
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa officiis officia magni ut dolor obcaecati eaque explicabo, distinctio voluptates aspernatur facere! Quasi tempora facilis, quis reprehenderit et nostrum, magni eum nemo perspiciatis quo a, facere fugiat commodi cum ratione! Cupiditate?
+                        </div>
+                      </div>
+                      <button class="slick__next slick__arrow">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
+                            <g id="down" fill="#000000" transform="translate(-59.382 15) rotate(-90)">
+                              <path id="Path_19" data-name="Path 19" d="M14.85,60.619,14.1,59.588a.393.393,0,0,0-.691,0L7.5,67.691l-5.907-8.1a.427.427,0,0,0-.346-.206.427.427,0,0,0-.346.206L.15,60.619a.823.823,0,0,0,0,.948l7,9.608a.393.393,0,0,0,.691,0l7-9.608a.825.825,0,0,0,0-.949Z" transform="translate(0 0)"/>
+                            </g>
+                          </svg>
+                        </span>
+                      </button>
+                    </ngx-slick-carousel>
+                  </div>
+                  <h6 class="card__Title">
+                    SALES PROGRESS
+                  </h6>
+                  <ul class="card__list">
+                    <li class="card__item">
+                      <div class="card__content">
+                        <div class="card__content__outer">
+                          <div class="card__content__wrapper">
+                            <div class="card__content__wrapperLeft">
+                              <div class="card__content__heading">Total Orders</div>
+                              <div class="card__content__subheading">Last year expenses
+                                </div>
+                            </div>
+                            <div class="card__content__wrapperRight">
+                              <div class="card__content__number card__content__number--success ">
+                                <small>$</small>1896
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card__progress__wrapper">
+                            <div class="card__progress__progressbar">
+                              progress bar
+                            </div>
+                            <div class="card__progress__label">
+                              <div class="card__progress__labelLeft">YoY Groth</div>
+                              <div class="card__progress__labelRight">100%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="header__card header__card--wrapper">
+              <div class="card">
+                <div class="card__header">
+                  <div class="card__headerTitle">
+                    <img class="card__headerTitle--Image" src="assets/img/lighter.svg" alt="">
+                    Timeline Example
+                  </div>
+                  <div class="card__headerButton">
+                    <button class="button card__headerButton__view--remove">
+                      <img src="assets/img/hamburger.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+                <div class="card__body">
+                 <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vel sunt quibusdam. Molestiae architecto repellat neque libero modi voluptatem numquam alias, natus autem, fugiat corrupti sint recusandae at rerum totam sit deleniti est magnam distinctio. Et repellat maxime alias officiis pariatur numquam, aspernatur laboriosam ratione obcaecati optio quidem consectetur facilis voluptatibus laudantium soluta blanditiis. Possimus asperiores quod atque nemo labore quisquam eos quos hic harum, laboriosam accusantium ipsum ipsa soluta amet deserunt dolorum voluptate minus aspernatur dolorem sequi tempore ullam officia quam voluptates! Dicta rem alias magni laboriosam veniam dignissimos ab sed, mollitia minima, distinctio quis illum earum totam fugit reiciendis minus illo repellat dolorum, commodi voluptatibus modi est reprehenderit autem maxime! Inventore aliquid eligendi dolor magni officiis esse quae, at amet culpa maxime atque voluptatibus sapiente necessitatibus consequuntur, praesentium, labore distinctio ad voluptatum temporibus et omnis autem nisi! Ratione sunt perferendis sint ex saepe odio accusantium veritatis ipsam quidem.
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vel sunt quibusdam. Molestiae architecto repellat neque libero modi voluptatem numquam alias, natus autem, fugiat corrupti sint recusandae at rerum totam sit deleniti est magnam distinctio.
+                 Hello world to  Hello world to  Hello world -->
+                  <div class="card__scroll">
+                    <div class="scroll">
+                      <div class="scroll__content"></div>
+                      <div class="scroll__content-X">
+
+                      </div>
+                      <div class="scroll__content-Y"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__row">
+          <div class="col-md-6">
+            <div class="main__card">
+              <div class="card">
+                <div class="card__widgetChart">
+                  <div class="card__widgetChart__content">Hello</div>
+                  <div class="card__widgetChart__wrapper">world</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">Hello</div>
+          <div class="col-md-6">Hello</div>
+          <div class="col-md-6">Hello</div>
+        </div>
+        <div class="section">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate esse ducimus quisquam error optio nobis iste repellat quibusdam dolorem dolorum, sunt quasi laudantium ab incidunt qui earum debitis eaque minus eum, voluptatum dolore, nam nisi praesentium adipisci? Earum facere nostrum rerum quo rem asperiores non doloremque debitis ipsam accusamus possimus repellat fuga quos quia, consectetur assumenda, natus, optio labore velit pariatur. Fugit ad provident hic illum odit doloribus labore beatae optio dolor ducimus! Eum atque fugiat esse magni enim cumque ea rem facilis, tempore officiis! Corrupti quas, unde impedit nisi alias soluta ipsum neque perferendis eum dicta voluptatum sint molestias.
+        </div>
+        <div class="section">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate esse ducimus quisquam error optio nobis iste repellat quibusdam dolorem dolorum, sunt quasi laudantium ab incidunt qui earum debitis eaque minus eum, voluptatum dolore, nam nisi praesentium adipisci? Earum facere nostrum rerum quo rem asperiores non doloremque debitis ipsam accusamus possimus repellat fuga quos quia, consectetur assumenda, natus, optio labore velit pariatur. Fugit ad provident hic illum odit doloribus labore beatae optio dolor ducimus! Eum atque fugiat esse magni enim cumque ea rem facilis, tempore officiis! Corrupti quas, unde impedit nisi alias soluta ipsum neque perferendis eum dicta voluptatum sint molestias.
         </div>
       </div>
       <footer class="App__footer">

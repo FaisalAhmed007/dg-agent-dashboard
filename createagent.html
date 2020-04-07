@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="./imgs/favicon.png" />
+  <title>Agent Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+<body>
+  <div class="App">
+    <header class="App__header">
+      <div class="header">
+        <div class="header__logo">
+          <img src="assets/img/logo.svg" alt="">
+        </div>
+        <div class="header__content">
+          <div class="header__content__left">
+            <app-mega-menu>
+              <div class="header__content__left">
+                <div class="header__search">
+                  <input type="text" class="header__searchInput">
+                  <button class="button header__searchCloseButton">Search</button>
+                </div>
+              </div>
+            </app-mega-menu>
+          </div>
+          <div class="header__content__right">
+            <button class="button header__loginButton">login</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <sidebar class="App__sidebar">
+      <div class="sidebar">
+        <div class="sidebar__logo">
+          <img class="sidebar__logo--src" src="assets/img/logo.svg" alt="">
+          <div class="sidebar__pane ml-auto">
+            <button class="button sidebar__hamburger sidebar__hamburger--close sidebar__hamburger--elastic">
+             <span class="sidebar__hamburger--src">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14">
+                  <g id="Group_1" data-name="Group 1" transform="translate(-843 -525)">
+                    <path id="Path_1" data-name="Path 1" d="M23,123.668H1c-.552,0-1-.224-1-.5s.448-.5,1-.5H23c.552,0,1,.224,1,.5S23.552,123.668,23,123.668Zm0,0" transform="translate(843 408.832)"/>
+                    <path id="Path_2" data-name="Path 2" d="M23,1H1C.448,1,0,.776,0,.5S.448,0,1,0H23c.552,0,1,.224,1,.5S23.552,1,23,1Zm0,0" transform="translate(843 525)"/>
+                    <path id="Path_3" data-name="Path 3" d="M23,246.332H1c-.552,0-1-.224-1-.5s.448-.5,1-.5H23c.552,0,1,.224,1,.5S23.552,246.332,23,246.332Zm0,0" transform="translate(843 292.668)"/>
+                  </g>
+                </svg>
+             </span>
+            </button>
+          </div>
+        </div>
+        <div class="sidebar__content">
+          <h1 class="sidebar__contentTitle">
+            Main Navigation
+          </h1>
+          <ul class="sidebar__contentList">
+            <li class="sidebar__contentItem">
+              <a href="index.html" class="sidebar__contentLink">
+                <label for="" class="sidebar__contentLable">All Agents</label>
+              </a>
+            </li>
+            <li class="sidebar__contentItem">
+              <a href="#" class="sidebar__contentLink">
+                <label for="" class="sidebar__contentLable">Create Agents</label>
+              </a>
+            </li>
+            <li class="sidebar__contentItem">
+              <a href="" class="sidebar__contentLink">
+                <label for="" class="sidebar__contentLable">Agents List</label>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </sidebar>
+    <main class="App__main">
+      <div class="main main__wrapper">
+        <h1 class="main__title">Agents 
+          <small class="main__subtitle">add agent.</small>
+        </h1>
+        <div class="container">
+          <div class="column">
+            <div class="column is-three-fifths is-offset-one-fifth">
+              <div class="box box-wrapper">
+                <h4 class="subtitle is-6 content">Add a new agent</h4>
+                <div class="field">
+                  <label class="label">Mobile Number</label>
+                  <div class="control">
+                    <input class="input is-small" type="number" placeholder="Your mobile number">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Shop Name</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="Shop name">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Banner Image</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen 
+                      </span>
+                    </label>
+                  </div>
+    
+                </div>
+                <div class="field">
+                  <label class="label">Profile Image</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Name</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="Agnet name">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control">
+                    <input class="input is-small" type="password" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Confirm Password</label>
+                  <div class="control">
+                    <input class="input is-small" type="password" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Operating Region</label>
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <div class="select is-fullwidth is-small">
+                        <select name="country">
+                          <span>
+                            <option value="">
+                              <input type="text">
+                            </option>
+                          </span>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Location</label>
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <div class="select is-fullwidth is-small">
+                        <select name="location">
+                          <option value="Cumillah">Cumillah</option>
+                          <option value="Dhaka">Dhaka</option>
+                          <option value="Chottogram">Chottogram</option>
+                          <option value="Gazipur">Gazipur</option>
+                          <option value="Khulna">Khulna</option>
+                          <option value="Sylhet">Sylhet</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Area</label>
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <div class="select is-fullwidth is-small">
+                        <select name="area">
+                          <option value="Kandirpar">Kandirpar</option>
+                          <option value="Mohammadpur">Mohammadpur</option>
+                          <option value="Mirpur">Mirpur</option>
+                          <option value="Dhanmondi">Dhanmondi</option>
+                          <option value="Gulshan">Gulshan</option>
+                          <option value="Gulistan">Gulistan</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Address</label>
+                  <div class="control">
+                    <textarea class="textarea is-small" placeholder="Small textarea"></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Latitude</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="Shop name">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Longitude</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="Shop name">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Active?
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Online delivery enabled?
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Hire Purchase enabled? 
+                  </label>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Shop Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Acquisition Form Photo/PDF</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Registration Form Photo/PDF</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent NID Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Trade Licence Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nominee Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nominee NID Photo</label>
+                  <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input class="file-input is-small" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose a file…
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        No file chosen
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nominee Name</label>
+                  <div class="control">
+                    <input class="input is-small" type="number" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nominee Mobile Number</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nominee Address</label>
+                  <div class="control">
+                    <input class="input is-small" type="number" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent alternative Mobile Number</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">DG SIM Number</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Tab IMEI</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Channel Mode</label>
+                  <div class="control is-expanded">
+                    <div class="select is-fullwidth is-small">
+                      <select>
+                        <option>-</option>
+                        <option>General Store</option>
+                        <option>Service Kisok</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Agent Channel Type</label>
+                  <div class="control is-expanded">
+                    <div class="select is-fullwidth is-small">
+                      <select>
+                        <option value=""></option>
+                        <option>Telco Service and MFS</option>
+                        <option>Service Kisok</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Avg. Monthly Store Sales Value</label>
+                  <div class="control">
+                    <input class="input is-small" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">DgSupply Groups</label>
+                  <div class="control">
+                    <input class="input is-small" type="number" placeholder="">
+                  </div>
+                </div>
+                <div class="buttons buttons-wrap">
+                  <button class="button is-success">Save and back</button>
+                  <button class="button is-static">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="App__footer">
+        <div class="footer">Hello</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
+

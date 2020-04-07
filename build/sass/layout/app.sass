@@ -213,6 +213,262 @@
               border-color: #3ac47d
               box-shadow: 0 0.125rem 0.625rem rgba(58, 196, 125, 0.4), 0 0.0625rem 0.125rem rgba(58, 196, 125, 0.5)
               padding: 0 10px
+        &__card
+          margin-bottom: 30px !important
+          .card 
+            position: relative
+            display: flex
+            flex-direction: column 
+            min-width: 0 
+            word-wrap: break-word
+            box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03)
+            background-color: #fff
+            background-clip: border-box
+            border: 1px solid rgba(26, 54, 126, 0.125)
+            border-radius: 0.25rem
+            &__header
+              border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0
+              display: flex 
+              align-items: center 
+              padding: 0.75rem 1.25rem 
+              height: 3.5rem 
+              background-color: #ffffff 
+              border-bottom: 1px solid rgba(26, 54, 126, 0.125)
+              &Title 
+                display: flex 
+                align-items: center 
+                white-space: nowrap
+                font-size: 16px 
+                font-weight: 400 
+                text-transform: capitalize
+                color: rgba($black, 0.5)
+                &--Image
+                  width: 26px 
+                  height: 26px
+                  margin-right: 10px
+              &Button 
+                margin-left: auto
+                &__view 
+                  +button 
+                  border: 2px solid $black
+                  height: 30px
+                  padding: 0.25rem 1rem
+                  font-size: 0.8rem
+                  line-height: 1.5
+                  border-radius: 0.2rem
+                  &--remove 
+                    border: none 
+            &__body 
+              margin-right: 0 
+              margin-left: 0 
+              display: flex 
+              flex-wrap: wrap 
+              &Row1,
+              &Row2,
+              &Row3, 
+                position: relative
+                flex: 0 0 33.33333333%
+                max-width: 33.33333333%
+                height: 130px
+                background-color: #ffffff
+              .widget-chart 
+                padding: 16px 
+                position: relative
+                display: flex 
+                align-items: center 
+                aligin-content: center 
+                &__Icon
+                  position: relative
+                  display: flex 
+                  align-items: center
+                  justify-content: center
+                  width: 54px 
+                  height: 54px 
+                  border-radius: 50px 
+                  overflow: hidden
+                  border: 1px solid #dddddd
+                  margin-right: 16px
+                  background-color: #f7b924 
+                  &--dgDanger
+                    background-color: #d92550
+                  &--bg-success
+                    background-color: #3ac47d 
+                  &Image 
+                    width: 27px
+                    height: 27px
+                    color: #ffffff 
+                    fill: #ffffff
+                &__Content 
+                  position: relative
+                  display: flex 
+                  flex-direction: column
+                  flex: 1 
+                  margin: 0
+                  padding: 0
+                &__subheading
+                  font-size: 14px 
+                  line-height: 1.22 
+                  color: rgba($black, 0.3)
+                &__number
+                  font-size: 40px
+                  line-height: 1.15 
+                &__description
+                  display: inline-flex 
+                  align-items: center
+                  font-size: 12px 
+                  line-height: 1.22
+                  color: rgba($black, 0.6)
+                  &__ratio 
+                    margin-right: 10px
+                    color: #d92550 
+                    &--left 
+                      margin-left: 10px
+                      color: #16aaff
+                      .pl-1 
+                        svg 
+                          margin-top: 2px
+                      .pl-3 
+                        color: #f7b924
+            .slick
+              position: relative
+              &__slider 
+              &__arrow
+                +button 
+                position: absolute
+                display: block
+                height: 40px
+                width: 40px
+                cursor: pointer
+                color: #6c757d
+                top: 50%
+                transform: translate(0, -80%)
+                box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03)
+                padding: 0
+                border: none
+                outline: none
+                transition: all .2s;
+                border-radius: 50px
+                background: #fff
+                z-index: 6
+                overflow: hidden
+                border: 1px solid #dddddd
+              &__prev 
+                left: 0
+                &Image 
+                  width: 20px 
+                  height: 20px
+              &__next 
+                right: 0
+            &__Title 
+              font-size: 16px 
+              line-height: 1.22 
+              font-weight: 400
+              color: #6c757d
+              padding: 30px 15px 10px
+              width: 100% 
+            &__list 
+              margin-top: 10px
+              background-color: rgba(red, 0.2)
+              position: relative
+              display: flex 
+              flex-direction: column 
+              width: 100% 
+            &__item 
+              position: relative
+              display: block
+              background-color: #fff
+              border-top: 1px solid rgba(0, 0, 0, 0.125)
+            &__content 
+              flex-direction: row 
+              align-content: center
+              padding: 15px 
+              &__outer 
+                flex-direction: column
+              &__wrapper 
+                position: relative
+                display: flex 
+                align-items: center 
+                &Left 
+                  flex: 1 
+                &Right 
+                  flex: 1 
+                  text-align: right
+              &__heading,
+              &__subheading
+                font-size: 14px 
+                line-height: 21px 
+                color: #495057
+                font-weight: bold 
+              &__subheading
+                font-weight: 400
+              &__number 
+                font-size: 1.8rem
+                display: block
+                font-weight: 700 
+                color: #3ac47d
+            &__progress 
+              position: relative
+              &__wrapper 
+                position: relative 
+                display: flex 
+                flex-direction: column
+              &__label 
+                position: relative
+                display: flex 
+                flex-direction: row 
+                align-items: center 
+                align-content: center 
+                font-size: 14px 
+                line-height: 21px 
+                color: #bdbdbd
+                margin-top: 10px
+                &Left 
+                  flex: 1 
+                &Right 
+                  flex: 1 
+                  text-align: right
+          .card 
+            &__widget 
+              border: 1px solid red 
+
+            &__footer 
+              border-top: 1px solid rgba(26, 54, 126, 0.125)
+              position: relative
+              display: flex 
+              align-items: center 
+              align-items: center
+              justify-content: center
+              padding: .75rem 1.25rem
+            &__button
+              +button 
+              border-radius: 50px 
+              color: #fff
+              background-color: #3f6ad8
+              border-color: #3f6ad8
+              height: 40px
+              box-shadow: 0 0.125rem 0.625rem rgba(63, 106, 216, 0.4), 0 0.0625rem 0.125rem rgba(63, 106, 216, 0.5)
+              padding: 8px 32px
+              font-size: 16px
+              line-height: 1.22
+      &__row   
+        position: relative
+        display: flex 
+        flex-wrap: wrap
+        align-items: center 
+        align-content: center
+        .col-lg-6 
+          flex: 1 50% 
+          max-width: 50%
+          padding-right: 15px 
+          padding-left: 15px
+          .header__card--wrap 
+            margin-left: -15px
+          .header__card--wrapper
+            margin-right: -15px
+        .col-md-6 
+          flex: 0 0 25%
+          max-width: 25%
+          background-color: rgba(red, 0.2) 
   &__footer 
     position: fixed
     bottom: 0 
